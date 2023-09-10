@@ -20,7 +20,8 @@ fun DataColumn(games:String,
         verticalArrangement = Arrangement.spacedBy(16.dp)
 
     ){
-        Text(text = "1.Completa los datos:")
+        TitleText(text = "1.Completa los datos:")
+        //refactor component to detect errors and style Design
         TextField (
             value = games,
             onValueChange = { onGamesChange },

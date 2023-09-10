@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.accecode.procimage.ui.components.DataColumn
+import com.accecode.procimage.ui.components.InfoColumn
 import com.accecode.procimage.ui.theme.ProcImageTheme
 
 class MainActivity : ComponentActivity() {
@@ -61,17 +62,15 @@ private fun Content() {
         }
     ) { padding ->
         Column(
-            modifier = Modifier.padding(padding).padding(16.dp)
+            Modifier.padding(padding).padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(32.dp)
         ) {
             DataColumn(games,
                 elements,
                 onGamesChange= { games = it },
                 onElementsChange = { elements = it })
 
-            DataColumn(games,
-                elements,
-                onGamesChange= { games = it },
-                onElementsChange = { elements = it })
+            InfoColumn()
 
             DataColumn(games,
                 elements,
