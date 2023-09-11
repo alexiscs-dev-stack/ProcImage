@@ -26,13 +26,17 @@ fun DataColumn(games:String,
             value = games,
             onValueChange = { onGamesChange },
             label = { Text(text = "Juego de referencia") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            isError = games.isEmpty()
         )
         TextField (
             value = elements,
             onValueChange = { onElementsChange },
             label = { Text(text = "Juego de referencia") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            isError = elements.isEmpty()
         )
     }
 }
